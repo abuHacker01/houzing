@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with Dilmurod_ibn_Yoqubjan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Houzing](https://github.com/abuHacker01/houzing).
+
+# can see the DEMO [Houzing](https://netlify.com/abuHacker01/houzing).
 
 ## Available Scripts
 
