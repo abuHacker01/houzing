@@ -1,7 +1,5 @@
-import styled from `styled-component`
+import styled from "styled-components";
 
-const Container = styled.section`
+const Container = styled.section``;
 
-`
-
-export {Container}
+export { Container };
