@@ -9,18 +9,24 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const Wrapper = styled.nav`
+export const Main = styled.div`
+  display: flex;
+  justify-content: center;
+  background: var(--colorPrimary);
+`;
+
+export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background-color: var(--colorPrimary);
-  color: #fff;
+  color: #ffff;
   padding: var(--padding);
   height: 64px;
 
   font-size: 16px;
-  max-width: 1440px;
+
+  width: 100%;
 `;
 
 export const Section = styled.div`

@@ -1,34 +1,41 @@
 import React from "react";
-import { Container, Logo, Section, Wrapper, Link } from "./style";
+import { Container, Logo, Section, Wrapper, Link, Main } from "./style";
 import { Outlet, useNavigate } from "react-router-dom";
 import navbar from "../../utils/navbar";
+import { Button } from "../Generic/Button";
 
 export const Navbar = () => {
   const navigate = useNavigate();
   return (
     <Container>
-      <Wrapper>
-        <Section onClick={() => navigate("./home")} >
-          <Logo />
-          <h3>Hauzing</h3>
-        </Section>
-        <Section>
-          {navbar.map(({ title, path }, index) => {
-            return (
-              <Link
-                className={({ isActive }) => isActive && "active"}
-                to={path}
-                key={index}
-              >
-                {title}
-              </Link>
-            );
-          })}
-        </Section>
-        <Section>
-          <button>Sign in</button>
-        </Section>
-      </Wrapper>
+      <Main>
+        <Wrapper>
+          <Section onClick={() => navigate("./home")}>
+            <Logo />
+            <h3>Hauzing</h3>
+          </Section>
+          <Section>
+            {navbar.map(({ title, path, hidden }, index) => {
+              return (
+                !hidden && (
+                  <Link
+                    className={({ isActive }) => isActive && "active"}
+                    to={path}
+                    key={index}
+                  >
+                    {title}
+                  </Link>
+                )
+              );
+            })}
+          </Section>
+          <Section>
+            <Button onClick={() => navigate("./signin")} type={"dark"}>
+              Sign In
+            </Button>
+          </Section>
+        </Wrapper>
+      </Main>
       <Outlet />
     </Container>
   );
