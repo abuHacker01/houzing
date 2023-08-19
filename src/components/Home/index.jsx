@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "./style";
-import { Input, Button } from "../Generic";
+import { Input } from "../Generic";
 
 export const Home = () => {
   return (
