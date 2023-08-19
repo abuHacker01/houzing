@@ -3,6 +3,7 @@ import { Container, Logo, Section, Wrapper, Link, Main } from "./style";
 import { Outlet, useNavigate } from "react-router-dom";
 import navbar from "../../utils/navbar";
 import { Button } from "../Generic/Button";
+import Serching from "../Filter";
 
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ export const Navbar = () => {
           </Section>
         </Wrapper>
       </Main>
+      <Serching />
       <Outlet />
     </Container>
   );
