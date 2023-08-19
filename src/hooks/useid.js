@@ -1,8 +1,8 @@
-import { useId } from "react";
+import { useId } from 'react';
 
-const useUnicid = () => {
+const useUniqueId = () => {
   const id = useId();
-  return useId;
+  return id;
 };
 
-export default useUnicid;
+export default useUniqueId;
